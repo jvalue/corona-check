@@ -1,0 +1,22 @@
+return data.features.map(x => {
+    const a = x.attributes;
+    return {
+        id: a.RS,
+        name: a.GEN,
+        type: a.BEZ,
+        population: a.EWZ,
+        state: a.BL,
+        population_state: a.EWZ_BL,
+        death_rate: a.death_rate,
+        cases: a.cases,
+        deaths: a.deaths,
+        cases_per_100k: a.cases_per_100k,
+        cases_per_population: a.cases_per_population,
+        last_update: a.last_update,
+        cases7_per_100k: a.cases7_per_100k,
+        cases7_bl_per_100k: a.cases7_bl_per_100k,
+    };
+}).reduce((acc, value) => {
+    acc[value.id] = value;
+    return acc;
+});

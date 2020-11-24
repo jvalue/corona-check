@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>CoronaCheck - ODS Example App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <form id="form">
+    <h1>CoronaCheck</h1>
+    <h4 class="subtitle">powered by
+      <a href="https://github.com/jvalue/open-data-service" target="_blank" rel="norel">
+        JValue Open Data Service
+      </a>
+      </h3>
+      <p class="status" id="status-zip"></p>
+      <div class="form-group">
+        <label for="zip">Postleitzahl:</label>
+        <input id="zip" placeholder="91058" value="91058"></input>
+      </div>
+      <div class="form-group">
+        <input type="submit" id="submit" value="Anfragen">
+      </div>
+      <p class="status" id="status-lookup"></p>
+  </form>
+  <div id="results">
+
+  </div>
+  <template id="result-template">
+    <div class="result-entry">
+      <h1 class="name"></h1>
+      <h4 class="subtitle">
+        <span class="type"></span>
+        (<span class="population"></span> Einwohner)
+      </h4>
+      <h3>Aktuell (letzte 7 Tage):</h3>
+      <p>
+        <span class="value casesWeekPerHundredThousand"></span> Neuinfizierte pro 100.000 Einwohner
+      </p>
+      <h3>Insgesamt (seit Corona-Beginn):</h3>
+      <p>
+        <span class="value cases"></span> Infizierte<br>
+        <span class="value deaths"></span> Todesfälle<br>
+        <span class="value casesPerHundredThousand"></span> Infizierte pro 100.000 Einwohner
+      </p>
+      <h3>Vergleich mit Bundesland</h3>
+      <p>
+        Bundesland <span class="state"></span> (<span class="populationState"></span> Millionen Einwohner)<br>
+        <span class="value casesWeekStatePerHundredThousand"></span> Neuinfizierte pro 100.000 Einwohner (7 Tage)
+      </p>
+      <p>
+        Letztes Update: <span class="lastUpdate"></span>
+      </p>
+    </div>
+  </template>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=1%3D1&outFields=RS,GEN,BEZ,SN_K,EWZ,death_rate,cases,deaths,cases_per_100k,cases_per_population,BL,last_update,cases7_per_100k,cases7_bl_per_100k,EWZ_BL&returnGeometry=false&outSR=4326&f=json

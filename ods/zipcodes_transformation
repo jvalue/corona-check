@@ -1,0 +1,4 @@
+return data.reduce((acc, zip) => {
+    acc[zip.zipcode] = zip.community_code;
+    return acc;
+}, {});
